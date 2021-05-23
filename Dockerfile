@@ -18,3 +18,5 @@ RUN chmod +x /usr/local/bin/entrypoint.sh \
 ENTRYPOINT ["entrypoint.sh"]
 
 USER haproxy
+
+CMD ["haproxy", "-f", "/usr/local/etc/haproxy/haproxy.cfg"]
