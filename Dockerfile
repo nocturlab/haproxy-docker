@@ -6,7 +6,9 @@ USER 0:0
 RUN set -eux \
  ;  apk update \
  && apk add --no-cache --virtual \
-      gettext=0.20.2-r2
+      go
+
+RUN go get github.com/a8m/envsubst/cmd/envsubst
 
 COPY proxy.config /proxy.config.template
 COPY entrypoint.sh /usr/local/bin/
