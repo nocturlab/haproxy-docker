@@ -12,6 +12,7 @@ COPY proxy.config /proxy.config.template
 COPY entrypoint.sh /usr/local/bin/
 
 RUN chmod +x /usr/local/bin/entrypoint.sh
+RUN chown haproxy /usr/local/etc/haproxy/haproxy.cfg
 
 ENTRYPOINT ["entrypoint.sh"]
 
