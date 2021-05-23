@@ -6,7 +6,7 @@ USER 0:0
 RUN set -eux \
  ;  apk update \
  && apk add --no-cache --virtual \
-      gettext
+      gettext=0.20.2-r2
 
 COPY proxy.config /proxy.config.template
 COPY entrypoint.sh /usr/local/bin/
